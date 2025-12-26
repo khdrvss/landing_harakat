@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HARAKAT — TJM</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      --primary: #f4c542;
+      --text: #101114;
+      --muted: #5f6570;
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --border: #e6e7ea;
+    }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      padding: 64px 24px 48px;
+      background: #0f1115;
+      color: #ffffff;
+    }
+    header h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 3vw, 3.5rem);
+      max-width: 720px;
+    }
+    header p {
+      max-width: 720px;
+      margin: 0 0 28px;
+      color: #cfd3da;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    section {
+      padding: 56px 0;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #1a1200;
+    }
+    .btn.secondary {
+      background: transparent;
+      border-color: #cfd3da;
+      color: inherit;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(17, 19, 23, 0.05);
+    }
+    .muted {
+      color: var(--muted);
+    }
+    footer {
+      background: #0f1115;
+      color: #cfd3da;
+      padding: 32px 24px;
+    }
+    footer .grid {
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>HARAKAT — harakatda yashaydiganlar manzili</h1>
+      <p>
+        Eski va Yangi Toshkent oralig‘ida joylashgan biznes-klass turar-joy majmuasi.
+        3,15 m baland shiftlar, ratsional rejalashtirish va vaqtni qadrlaydigan insonlar uchun yaratilgan arxitektura.
+      </p>
+      <div class="cta-group">
+        <a class="btn primary" href="#kontakt">🟡 Hozir qo‘ng‘iroq qilish</a>
+        <a class="btn secondary" href="#kontakt">▫️ Telegram’da yozish</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="loyiha">
+      <h2>Oldinga harakat qilayotganlar uchun maskan</h2>
+      <p>
+        HARAKAT — bu shunchaki turar-joy emas. Bu shahar ritmida yashaydigan, qarorlarni tez qabul qiladigan va vaqtni eng qimmat resurs deb biladigan insonlar uchun yaratilgan muhit.
+      </p>
+      <p>
+        Majmua 30–50 yoshdagi mutaxassislar, tadbirkorlar va rahbarlar ehtiyojidan kelib chiqib loyihalashtirilgan. Bu yerda ortiqcha detallar yo‘q — har bir metr, har bir xizmat samaradorlik uchun ishlaydi.
+      </p>
+      <p><strong>HARAKAT — bu shahardagi shaxsiy tayanch nuqtangiz.</strong></p>
+    </section>
+
+    <section id="afzalliklar">
+      <h2>HARAKAT’ni tanlash sabablari</h2>
+      <div class="grid grid-3">
+        <div class="card">3,15 m shift balandligi — kenglik va erkinlik hissi</div>
+        <div class="card">Monolit + gazoblok — mustahkam va ishonchli konstruktsiya</div>
+        <div class="card">Yer osti parking — qulaylik va xavfsizlik</div>
+        <div class="card">Konsyerj xizmati — kundalik masalalarga kamroq vaqt</div>
+        <div class="card">HORECA zonalari — majmua ichida hayot</div>
+        <div class="card">Ratsional rejalashtirish — ortiqcha yo‘laklar yo‘q</div>
+        <div class="card">Yopiq hudud — shaxsiylik va xavfsizlik</div>
+        <div class="card">24 oygacha bo‘lib to‘lash — moslashuvchan xarid shartlari</div>
+      </div>
+      <div class="cta-group" style="margin-top: 24px;">
+        <a class="btn primary" href="#kontakt">Tafsilotlarni aniqlash</a>
+        <a class="btn secondary" href="#kontakt">Menejerga yozish</a>
+      </div>
+    </section>
+
+    <section id="infratuzilma">
+      <h2>Shahar arxitekturasi va ichki muhit</h2>
+      <div class="grid grid-3">
+        <div class="card">Yer osti avtoturargohlar</div>
+        <div class="card">Sport zali</div>
+        <div class="card">Kafelar va muassasalar</div>
+        <div class="card">Kinoteatr</div>
+        <div class="card">Spa majmuasi</div>
+        <div class="card">Bolalar o‘yingohi</div>
+        <div class="card">O‘yin maydoni</div>
+        <div class="card">Maktab</div>
+        <div class="card">Bolalar bog‘chasi</div>
+      </div>
+      <div class="cta-group" style="margin-top: 24px;">
+        <a class="btn primary" href="#kontakt">Rejalashtirishlar haqida bilish</a>
+        <a class="btn secondary" href="#kontakt">Yozish</a>
+      </div>
+    </section>
+
+    <section id="rejalashtirish">
+      <h2>Hayot tarzingizga mos formatni tanlang</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <p class="muted">Maydon: 45–120 m²</p>
+          <p class="muted">Xonalar soni: 1 / 2 / 3</p>
+          <p>Ratsional zonalash, keng oshxona va yorug‘ xonalar</p>
+        </div>
+        <div class="card">
+          <p class="muted">Maydon: 45–120 m²</p>
+          <p class="muted">Xonalar soni: 1 / 2 / 3</p>
+          <p>Ratsional zonalash, keng oshxona va yorug‘ xonalar</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shartlar">
+      <h2>Qulay xarid shartlari</h2>
+      <p>
+        HARAKAT sizga moliyaviy jihatdan qulay yechimlarni taklif etadi. Xarid shartlari individual tarzda tanlanadi.
+      </p>
+      <ul>
+        <li>24 oygacha bo‘lib to‘lash</li>
+        <li>Boshlang‘ich to‘lov variantlari</li>
+        <li>Ipoteka imkoniyatlari</li>
+      </ul>
+      <div class="cta-group">
+        <a class="btn primary" href="#kontakt">Hisob-kitob uchun qo‘ng‘iroq qilish</a>
+        <a class="btn secondary" href="#kontakt">Yozish</a>
+      </div>
+    </section>
+
+    <section id="lokatsiya">
+      <h2>Vaqtni tejaydigan lokatsiya</h2>
+      <p>
+        HARAKAT Eski va Yangi Toshkentni bog‘lovchi strategik nuqtada joylashgan. Bu sizga ish, uchrashuvlar va shaxsiy hayot o‘rtasida ideal balansni saqlash imkonini beradi.
+      </p>
+    </section>
+
+    <section id="kontakt">
+      <h2>Qo‘ng‘iroq qiling — va biz hayot ritmingizga mos uy topib beramiz</h2>
+      <div class="cta-group">
+        <a class="btn primary" href="tel:+998000000000">🟡 Menejerga qo‘ng‘iroq qilish</a>
+        <a class="btn secondary" href="https://t.me/">▫️ Telegram’da yozish</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container grid">
+      <div>Manzil</div>
+      <div>Telefon</div>
+      <div>Telegram</div>
+      <div>Ish vaqti</div>
+      <div>HARAKAT ©</div>
+    </div>
+  </footer>
+</body>
+</html>
