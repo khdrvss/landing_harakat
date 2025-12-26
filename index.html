@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-uz="HARAKAT — Toshkentdagi biznes-klass" data-ru="HARAKAT — Бизнес-класс в Ташкенте">HARAKAT —
+    Toshkentdagi biznes-klass</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --font-headlines: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container nav-container">
+        <div class="logo">HARAKAT</div>
+        <div class="nav-links">
+          <a href="#philosophy" data-uz="Falsafa" data-ru="Философия">Falsafa</a>
+          <a href="#location" data-uz="Manzil" data-ru="Локация">Manzil</a>
+          <a href="#apartments" data-uz="Xonadonlar" data-ru="Квартиры">Xonadonlar</a>
+          <a href="#payment" data-uz="Shartlar" data-ru="Условия">Shartlar</a>
+        </div>
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="uz">UZ</button>
+            <span class="divider">/</span>
+            <button class="lang-btn" data-lang="ru">RU</button>
+          </div>
+          <a href="tel:+998555508888" class="btn btn-secondary btn-sm" data-uz="Qo'ng'iroq"
+            data-ru="Позвонить">Qo'ng'iroq</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="/src/assets/harakat_hero_evening.png" alt="HARAKAT Business Class" class="hero-bg">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-badge" data-uz="Biznes-klass" data-ru="Бизнес-класс">Biznes-klass</span>
+            <h1 data-uz="HARAKAT.<br>Muvaffaqiyat ritmida yashang." data-ru="HARAKAT.<br>Живите в ритме достижений.">
+              HARAKAT.<br>Muvaffaqiyat ritmida yashang.</h1>
+            <p data-uz="Eski va Yangi Toshkent chorrahasida faol hayot uchun sizning bazangiz."
+              data-ru="Ваша база для активной жизни на пересечении Старого и Нового Ташкента.">Eski va Yangi Toshkent
+              chorrahasida faol hayot uchun sizning bazangiz.</p>
+            <div class="hero-actions">
+              <a href="tel:+998555508888" class="btn btn-primary" data-uz="Menejerga qo'ng'iroq"
+                data-ru="Позвонить менеджеру">Menejerga qo'ng'iroq</a>
+              <a href="https://t.me/harakattjm_bot" target="_blank" class="btn btn-secondary"
+                style="background: white; border-color: white;" data-uz="Telegramda yozish"
+                data-ru="Написать в Telegram">Telegramda yozish</a>
+            </div>
+          </div>
+
+          <!-- Integrated Quiz Container -->
+          <div class="hero-quiz">
+            <div class="quiz-container">
+              <div id="quiz-step-1" class="quiz-step active">
+                <h2 data-uz="Nechi xonali uy sizni qiziqtiradi?" data-ru="Какая квартира вас интересует?">Nechi xonali
+                  uy
+                  sizni qiziqtiradi?</h2>
+                <div class="quiz-options">
+                  <button class="quiz-opt" data-val="1 xonali" data-uz="1 xonali" data-ru="1-комнатная">1
+                    xonali</button>
+                  <button class="quiz-opt" data-val="2 xonali" data-uz="2 xonali" data-ru="2-комнатная">2
+                    xonali</button>
+                  <button class="quiz-opt" data-val="3 xonali" data-uz="3 xonali" data-ru="3-комнатная">3
+                    xonali</button>
+                </div>
+              </div>
+
+              <div id="quiz-step-2" class="quiz-step">
+                <h2 data-uz="Ismingiz nima?" data-ru="Как вас зовут?">Ismingiz nima?</h2>
+                <input type="text" id="lead-name" class="quiz-input" placeholder="Ismingiz / Имя" required>
+                <button class="btn btn-primary quiz-next" data-uz="Keyingisi" data-ru="Далее">Keyingisi</button>
+              </div>
+
+              <div id="quiz-step-3" class="quiz-step">
+                <h2 data-uz="Telefon raqamingizni qoldiring" data-ru="Оставьте ваш номер телефона">Telefon raqamingizni
+                  qoldiring</h2>
+                <div class="phone-input-wrapper">
+                  <span class="prefix">+998</span>
+                  <input type="tel" id="lead-phone" class="quiz-input" placeholder="XX XXX XX XX" maxlength="12"
+                    required>
+                </div>
+                <p class="quiz-note" data-uz="Faqat O'zbekiston raqamlari" data-ru="Только узбекские номера">Faqat
+                  O'zbekiston raqamlari</p>
+                <button id="submit-lead" class="btn btn-primary" data-uz="Yuborish"
+                  data-ru="Отправить">Yuborish</button>
+              </div>
+
+              <div id="quiz-success" class="quiz-step text-center">
+                <h2 data-uz="Rahmat!" data-ru="Спасибо!">Rahmat!</h2>
+                <p data-uz="Menejerimiz tez orada siz bilan bog'lanadi."
+                  data-ru="Наш менеджер свяжется с вами в ближайшее время.">Menejerimiz tez orada siz bilan bog'lanadi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy Section -->
+      <section id="philosophy" class="philosophy container">
+        <div class="philosophy-text">
+          <span class="lang-label" data-uz="FALSAFA" data-ru="ФИЛОСОФИЯ">FALSAFA</span>
+          <h2>HARAKAT =<br>MOVEMENT.</h2>
+          <p data-uz="Bu shunchaki turar-joy majmuasi emas. Bu tezlik, samaradorlik va natijani tanlaydiganlar uchun baza. Biz sizning ritmingizni qo'llab-quvvatlaydigan va ko'proq yutuqlarga erishishingizga yordam beradigan makon yaratdik."
+            data-ru="Это не просто жилой комплекс. Это база для тех, кто выбирает скорость, эффективность и результат. Мы создали пространство, которое поддерживает ваш ритм и помогает достигать большего.">
+            Bu shunchaki turar-joy majmuasi emas. Bu tezlik, samaradorlik va natijani tanlaydiganlar uchun baza. Biz
+            sizning ritmingizni qo'llab-quvvatlaydigan va ko'proq yutuqlarga erishishingizga yordam beradigan makon
+            yaratdik.</p>
+        </div>
+        <div class="philosophy-image">
+          <img src="/src/assets/harakat_philosophy.png" alt="Movement Philosophy">
+        </div>
+      </section>
+
+      <!-- Advantages Section -->
+      <section class="advantages">
+        <div class="container">
+          <span class="lang-label" data-uz="AFZALLIKLAR" data-ru="ПРЕИМУЩЕСТВА">AFZALLIKLAR</span>
+          <div class="advantages-grid">
+            <div class="advantage-item">
+              <span class="advantage-number">01</span>
+              <h3 data-uz="Tezlik uchun lokatsiya" data-ru="Локация для скорости">Tezlik uchun lokatsiya</h3>
+              <p data-uz="Eski va Yangi Toshkent orasidagi strategik joylashuv poytaxtning ishbilarmonlik markazlariga bir zumda borishni ta'minlaydi."
+                data-ru="Стратегическое положение между Старым и Новым Ташкентом обеспечивает мгновенный доступ к деловым центрам столицы.">
+                Eski va Yangi Toshkent orasidagi strategik joylashuv poytaxtning ishbilarmonlik markazlariga bir zumda
+                borishni ta'minlaydi.</p>
+            </div>
+            <div class="advantage-item">
+              <span class="advantage-number">02</span>
+              <h3 data-uz="Ratsional qulaylik" data-ru="Рациональный комфорт">Ratsional qulaylik</h3>
+              <p data-uz="Shift balandligi 3.15 m, dizaynerlik lobbilari va biznes-klass servisi. Har bir qaror sizning samaradorligingizga yo'naltirilgan."
+                data-ru="Потолки 3.15 м, дизайнерские лоби и сервис бизнес-класса. Каждое решение направлено на вашу продуктивность.">
+                Shift balandligi 3.15 m, dizaynerlik lobbilari va biznes-klass servisi. Har bir qaror sizning
+                samaradorligingizga yo'naltirilgan.</p>
+            </div>
+            <div class="advantage-item">
+              <span class="advantage-number">03</span>
+              <h3 data-uz="Likvid aktiv" data-ru="Ликвидный актив">Likvid aktiv</h3>
+              <p data-uz="Assalom Estate developperidan yuqori investitsiya jozibadorligi va shaffoflik. Siz uchun ishlaydigan uy-joy."
+                data-ru="Высокая инвестиционная привлекательность и прозрачность от девелопера Assalom Estate. Жилье, которое работает на вас.">
+                Assalom Estate developperidan yuqori investitsiya jozibadorligi va shaffoflik. Siz uchun ishlaydigan
+                uy-joy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section id="location" class="location container">
+        <div class="location-map">
+          <img src="/src/assets/harakat_map.png" alt="Strategic Location Map">
+        </div>
+        <div class="location-text">
+          <span class="lang-label" data-uz="MANZIL" data-ru="ЛОКАЦИЯ">MANZIL</span>
+          <h2 data-uz="Zamonlar<br>chorrahasida." data-ru="На пересечении<br>времен.">Zamonlar<br>chorrahasida.</h2>
+          <p data-uz="HARAKAT strategik nuqtada — Yangi Toshkent ritmi va Eski shaharning tarixiy merosi o'rtasida joylashgan. Bu bizning rezidentlarimizga barcha yo'nalishlarda harakatchanlikni saqlab, voqealar markazida bo'lish imkonini beradi."
+            data-ru="HARAKAT расположен в стратегической точке — между ритмом Нового Ташкента и историческим наследием Старого города. Это позволяет нашим резидентам быть в центре событий, сохраняя мобильность во всех направлениях.">
+            HARAKAT strategik nuqtada — Yangi Toshkent ritmi va Eski shaharning tarixiy merosi o'rtasida joylashgan. Bu
+            bizning rezidentlarimizga barcha yo'nalishlarda harakatchanlikni saqlab, voqealar markazida bo'lish imkonini
+            beradi.</p>
+        </div>
+      </section>
+
+      <!-- Apartments Section -->
+      <section id="apartments" class="apartments">
+        <div class="container">
+          <span class="lang-label" data-uz="REJALASHTIRISH" data-ru="ПЛАНИРОВКИ">REJALASHTIRISH</span>
+          <h2 data-uz="Ratsional<br>yechimlar." data-ru="Рациональные<br>решения.">Ratsional<br>yechimlar.</h2>
+
+          <div class="apartment-types">
+            <div class="apartment-card">
+              <span class="lang-label" data-uz="1 XONA" data-ru="1 КОМНАТА">1 XONA</span>
+              <span class="size">~32.5 m²</span>
+              <h4 data-uz="Samarali studiya" data-ru="Эффективная студия">Samarali studiya</h4>
+              <p class="details" data-uz="Investitsiyalar yoki bir kishining faol hayoti uchun ideal."
+                data-ru="Идеально для инвестиций или активной жизни одного человека.">Investitsiyalar yoki bir kishining
+                faol hayoti uchun ideal.</p>
+            </div>
+            <div class="apartment-card">
+              <span class="lang-label" data-uz="2 XONA" data-ru="2 КОМНАТЫ">2 XONA</span>
+              <span class="size">~58.4 m²</span>
+              <h4 data-uz="Biznes-standart" data-ru="Бизнес-стандарт">Biznes-standart</h4>
+              <p class="details" data-uz="Ish va dam olish uchun puxta o'ylangan hududlar."
+                data-ru="Продуманное зонирование для работы и отдыха.">Ish va dam olish uchun puxta o'ylangan hududlar.
+              </p>
+            </div>
+            <div class="apartment-card">
+              <span class="lang-label" data-uz="3 XONA" data-ru="3 КОМНАТЫ">3 XONA</span>
+              <span class="size">~87.07 m²</span>
+              <h4 data-uz="Muvaffaqiyat uchun kenglik" data-ru="Простор для успеха">Muvaffaqiyat uchun kenglik</h4>
+              <p class="details" data-uz="Murosa qilishga o'rganmaganlar uchun maksimal qulaylik."
+                data-ru="Максимальный комфорт для тех, кто не привык к компромиссам.">Murosa qilishga o'rganmaganlar
+                uchun maksimal qulaylik.</p>
+            </div>
+          </div>
+
+          <img src="/src/assets/harakat_interior.png" alt="Apartment Interior" class="apartment-hero-img">
+        </div>
+      </section>
+
+
+      <!-- Payment Section -->
+      <section id="payment" class="payment">
+        <div class="container">
+          <span class="lang-label" data-uz="TO'LOV SHARTLARI" data-ru="УСЛОВИЯ ПОКУПКИ">TO'LOV SHARTLARI</span>
+          <h2 data-uz="Moslashuvchanlik va<br>shaffoflik." data-ru="Гибкость и<br>прозрачность.">Moslashuvchanlik
+            va<br>shaffoflik.</h2>
+
+          <div class="payment-grid">
+            <div class="payment-card">
+              <h3 data-uz="100% To'lov" data-ru="100% Оплата">100% To'lov</h3>
+              <p data-uz="Xonadon narxini to'liq to'lashda individual shartlar va maksimal imtiyozlar."
+                data-ru="Индивидуальные условия и максимальные привилегии при полной оплате стоимости квартиры.">Xonadon
+                narxini to'liq to'lashda individual shartlar va maksimal imtiyozlar.</p>
+            </div>
+            <div class="payment-card">
+              <h3 data-uz="Muddatli to'lov 0%" data-ru="Рассрочка 0%">Muddatli to'lov 0%</h3>
+              <p data-uz="24 oygacha bo'lgan muddatli to'lov dasturi. Kapitalni taqsimlashning ratsional usuli."
+                data-ru="Программа рассрочки до 24 месяцев. Рациональный способ распределения капитала.">24 oygacha
+                bo'lgan muddatli to'lov dasturi. Kapitalni taqsimlashning ratsional usuli.</p>
+              <span class="clarification" data-uz="Boshlang'ich to'lov — aniqlashtirish talab etiladi"
+                data-ru="Первоначальный взнос — требуется уточнение">Boshlang'ich to'lov — aniqlashtirish talab
+                etiladi</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Construction Section -->
+      <section class="construction">
+        <div class="container">
+          <span class="lang-label" data-uz="QURILISH JARAYONI" data-ru="ХОД СТРОИТЕЛЬСТВА">QURILISH JARAYONI</span>
+          <h2 data-uz="Faol faza." data-ru="Активная фаза.">Faol faza.</h2>
+          <div class="construction-status">
+            <p data-uz="5 ta bino / 16 qavatgacha / Joriy holat: 8-qavatgacha ko'tarilgan"
+              data-ru="5 зданий / до 16 этажей / Текущий статус: возведено до 8 этажей">5 ta bino / 16 qavatgacha /
+              Joriy holat: 8-qavatgacha ko'tarilgan</p>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <p class="details" data-uz="Yakunlanishi: 2027-yil IV chorak" data-ru="Завершение: IV квартал 2027">
+              Yakunlanishi: 2027-yil IV chorak</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer Section -->
+      <section class="developer">
+        <div class="container developer-grid"
+          style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--spacing-lg);">
+          <div class="developer-text">
+            <span class="lang-label" data-uz="DEVELOPER" data-ru="ДЕВЕЛОПЕР">DEVELOPER</span>
+            <h2>Assalom Estate.</h2>
+            <p data-uz="Toshkent ko'chmas mulk bozoridagi tajriba, yirik va shuhratparast loyihada o'z aksini topgan. Biz jarayonlarning shaffofligi va xizmat ko'rsatishning yuqori sifatiga e'tibor qaratib, sizning istaklaringizga mos keladigan uy-joy yaratamiz."
+              data-ru="Опыт на рынке недвижимости Ташкента, воплощенный в масштабном амбициозном проекте. Мы фокусируемся на прозрачности процессов и высоком качестве сервиса, создавая жилье, которое соответствует вашим ожиданиям.">
+              Toshkent ko'chmas mulk bozoridagi tajriba, yirik va shuhratparast loyihada o'z aksini topgan. Biz
+              jarayonlarning shaffofligi va xizmat ko'rsatishning yuqori sifatiga e'tibor qaratib, sizning
+              istaklaringizga mos keladigan uy-joy yaratamiz.</p>
+          </div>
+          <div class="developer-img">
+            <img src="/src/assets/harakat_lobby.png" alt="Designer Lobby HARAKAT">
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final Section -->
+      <section class="cta-final">
+        <div class="container text-center">
+          <span class="lang-label" data-uz="KONTAKTLAR" data-ru="КОНТАКТЫ">KONTAKTLAR</span>
+          <h2 data-uz="Maqsadingiz sari<br>harakatni boshlang." data-ru="Начните движение<br>к цели.">Maqsadingiz
+            sari<br>harakatni boshlang.</h2>
+          <p data-uz="Shaxsiy maslahat oling hamda hayot va investitsiyalar uchun eng yaxshi yechimni tanlang."
+            data-ru="Получите персональную консультацию и выберите лучшее решение для жизни и инвестиций.">Shaxsiy
+            maslahat oling hamda hayot va investitsiyalar uchun eng yaxshi yechimni tanlang.</p>
+          <div class="cta-buttons">
+            <a href="tel:+998555508888" class="btn btn-primary" data-uz="Menejerga qo'ng'iroq"
+              data-ru="Позвонить менеджеру">Menejerga qo'ng'iroq</a>
+            <a href="https://t.me/harakattjm_bot" target="_blank" class="btn btn-secondary" data-uz="Telegramda yozish"
+              data-ru="Написать в Telegram">Telegramda yozish</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-black">
+      <div class="container text-center">
+        <div class="logo">HARAKAT</div>
+        <p data-uz="© 2025 Assalom Estate. Barcha huquqlar himoyalangan."
+          data-ru="© 2025 Assalom Estate. Все права защищены.">© 2025 Assalom Estate. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
