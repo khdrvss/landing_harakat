@@ -166,5 +166,64 @@ document.addEventListener('DOMContentLoaded', () => {
       e.target.value = formatted;
     });
   }
+
+  // Gallery Carousel Logic
+  const track = document.querySelector('.carousel-track');
+  if (track) {
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const dots = Array.from(document.querySelectorAll('.gallery-carousel .dot'));
+
+    let currentIndex = 0;
+    let autoPlayTimer;
+
+    const updateCarousel = (index) => {
+      // Handle wrap around
+      if (index >= slides.length) index = 0;
+      if (index < 0) index = slides.length - 1;
+
+      currentIndex = index;
+
+      // Slide track
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+
+      // Reset autoplay timer
+      startAutoPlay();
+    };
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        updateCarousel(currentIndex + 1);
+      }, 5000);
+    };
+
+    const stopAutoPlay = () => {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+    };
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+      prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        updateCarousel(index);
+      });
+    });
+
+    // Start initial autoplay
+    if (slides.length > 0) {
+      startAutoPlay();
+    }
+  }
 });
 
