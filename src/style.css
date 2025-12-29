@@ -381,6 +381,80 @@ section {
   filter: grayscale(0);
 }
 
+/* Map Overlay */
+.location-map {
+  position: relative;
+  cursor: pointer;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: var(--transition-smooth);
+}
+
+.map-overlay:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.map-icon {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: var(--transition-smooth);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.map-icon svg {
+  color: var(--color-gold);
+  filter: drop-shadow(0 2px 8px rgba(178, 132, 58, 0.5));
+}
+
+.map-label {
+  color: var(--color-milky);
+  font-family: var(--font-headlines);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.map-overlay:hover .map-icon {
+  transform: translateY(-5px);
+  border-color: var(--color-milky);
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.map-overlay:hover .map-icon svg {
+  color: var(--color-milky);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 /* Apartments Section */
 .apartments {
   background-color: var(--color-milky);
@@ -928,6 +1002,19 @@ section {
 
   .location-map iframe {
     height: 300px;
+  }
+
+  .map-icon {
+    padding: 1rem 1.5rem;
+  }
+
+  .map-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .map-label {
+    font-size: 0.75rem;
   }
 
   .developer-grid {
