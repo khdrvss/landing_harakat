@@ -838,6 +838,35 @@ section {
     margin-top: 1.5rem;
   }
 
+  .hero-quiz .quiz-container {
+    padding: 1rem;
+  }
+
+  .hero-quiz h2,
+  .quiz-step h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .quiz-opt {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .quiz-input {
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .phone-input-wrapper .prefix {
+    font-size: 1rem;
+  }
+
+  .quiz-options {
+    gap: 0.5rem;
+  }
+
   .philosophy {
     gap: 2rem;
   }
